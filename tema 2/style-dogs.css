@@ -1,0 +1,51 @@
+body{
+    background-color: #FDFFF4;
+    font-family: "Mulish", sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+}
+
+#verticalLine{
+    border-left: 1px solid black;
+    height: 600px;
+    margin: 0 50px 0 30px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+#selected{
+    color: blue;
+}
+
+img{
+    border: 2px solid #cccc;
+    height: 170px;
+    border-radius: 50%;
+    width: 170px;
+    margin-left: 200px;
+}
+
+h1,
+#firstColumn{
+    font-weight:bolder;
+}
+
+#info{
+    display: flex;
+}
+
+#secondColumn{
+    margin-left: 30px;
+}

@@ -1,0 +1,85 @@
+img{
+    width: 433px;
+}
+
+body{
+    font-family: "Mulish", sans-serif;
+    margin: 35px 50px 0;
+}
+
+.fa-star{
+    color: #f89d13;
+}
+
+p{
+    color: #848484;
+    font-weight: bold;
+}
+
+.fa-heart{
+    color: #ebedf0;
+}
+
+.checked{
+    color: #f23a2e;
+}
+
+.cartBtn{
+    color: white;
+    background-color: black;
+    border: 2px solid black;
+}
+
+.viewBtn{
+    color: black;
+    background-color: white;
+    border: 3px solid black;
+}
+
+#container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h2{
+    text-align: center;
+}
+
+.prodTitle{
+    display: flex;
+    flex-direction: column;
+    line-height: 2;
+}
+
+.rating{
+    display: flex;
+    justify-content: space-evenly;
+    width: 250px;
+    padding-left: 100px;
+}
+
+.fa-heart > p,
+.fa-star > p{
+    display: inline;
+    margin-left: 10px;
+}
+
+.description{
+    width: 300px;
+    padding-left: 75px;
+    text-align-last: center;
+}
+
+button{
+    width: 90px;
+    height: 40px;
+    font-size: medium;
+    font-weight: bolder;
+    margin: 25px 10px 0;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+}

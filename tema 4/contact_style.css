@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    font-family: "Mulish", sans-serif;
+}
+
+header {
+    background-color: #eeeeee;
+    height: 150px;
+    font-size: xx-large;
+    display: flex;
+    align-items: baseline;
+    padding: 30px 260px;
+}
+
+h1 {
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+
+h3 {
+    color: #999999;
+    font-weight: 500;
+    margin-left: 10px;
+    letter-spacing: 1px;
+}
+
+#container {
+    border: 2px solid #dfdfdf;
+    width: 755px;
+    height: 280px;
+    margin: 30px 455px;
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: space-between;
+}
+
+label {
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+::placeholder {
+    letter-spacing: -1px;
+    font-size: medium;
+    padding-left: 5px;
+}
+
+.firstColumn {
+    margin: 10px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 345px;
+    height: 30px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #dfdfdf;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px;
+}
+
+#messageInput {
+    border: 1px solid #dfdfdf;
+}
+
+#messageInput::placeholder {
+    font-size: large;
+}
+
+form {
+    display: flex;
+    height: 282px;
+}
+
+button{
+    width: 120px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid #3773a7;
+    color: white;
+    background-color: #4488c4;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.submit {
+    position: fixed;
+    bottom: 240px;
+    right: 335px;
+}
+
+p{
+    text-align: center;
+    padding-left: 160px;
+    margin-top: -10px;
+    font-size: 23px;
+    letter-spacing: -1px;
+}
+
+hr{
+    width: 360px;
+    margin-top: -20px;
+    margin-left: 650px;
+}
+
+.links{
+    width: 360px;
+    margin-left: 650px;
+    display: flex;
+    justify-content: space-between;
+}
+
+a{
+    text-decoration: none;
+    color: #4488c4;
+    font-size:small;
+    margin-top: 10px;
+}

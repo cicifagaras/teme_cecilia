@@ -7,9 +7,11 @@ console.log("main.js loaded....");
  */
 
 function getDigits(string) {
-    let result = string.match(/\d+/g).toString();
-    if (result.length > 1) {
-        result = result.replace(/,/g, "");
+    let result = "";
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] >= 0 || string[i] <= 9) {
+            result += string[i];
+        }
     }
     return result;
 }
@@ -22,9 +24,12 @@ function getDigits(string) {
  */
 
 function getLetters(string) {
-    let result = string.match(/[a-zA-Z]/g).toString();
-    if (result.length > 1) {
-        result = result.replace(/,/g, "");
+    let result = "";
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] >= "A" && string[i] <= "Z" ||
+            string[i] >= "a" && string[i] <= "z") {
+            result += string[i];
+        }
     }
     return result;
 }
@@ -53,8 +58,10 @@ function getFirst5Letters(string) {
  */
 
 function concatenate(array) {
-    let result = array.toString();
-    result = result.replace(/,/g, "");
+    let result = "";
+    for (let i = 0; i < array.length; i++) {
+        result += array[i];
+    }
     return result;
 }
 
@@ -66,8 +73,15 @@ function concatenate(array) {
  */
 
 function getAllDigits(array) {
-    let result = array.toString();
-    return getDigits(result);
+    let result = "";
+    let getNumber = "";
+    for (let i = 0; i < array.length; i++) {
+        getNumber = getDigits(array[i]);
+        if (getNumber != isNaN) {
+            result += getNumber;
+        }
+    }
+    return result;
 }
 
 
@@ -81,7 +95,7 @@ function invertAllStrings(array) {
     let result = [];
     for (let i = 0; i < array.length; i++) {
         let firstResult = "";
-        let newArray = array[i].toString();
+        let newArray = array[i];
 
         for (let k = newArray.length - 1; k >= 0; k--) {
             firstResult += newArray[k];
@@ -185,14 +199,26 @@ function palindrom(number) {
  */
 
 function sort(array) {
-    let resultArray = [];
+    let sortedArray = [];
+    let aux
     for (let i = 0; i < array.length; i++) {
         if (array[i] % 2 === 0) {
-            resultArray.push(array[i])
+            sortedArray.push(array[i])
         }
     }
-    return resultArray;
+
+    for (let i = 0; i < sortedArray.length; i++) {
+        for (let j = 0; j < sortedArray.length; j++) {
+            if (sortedArray[j] > sortedArray[i]) {
+                aux = sortedArray[j];
+                sortedArray[j] = sortedArray[i];
+                sortedArray[i] = aux;
+            }
+        }
+    }
+    return sortedArray;
 }
+
 
 
 /**
@@ -205,6 +231,7 @@ function sortAscDesc(array) {
     let finalArray = [];
     let parArray = [];
     let imparArray = [];
+    let aux;
 
     for (let i = 0; i < array.length; i++) {
         if (array[i] % 2 === 0) {
@@ -214,12 +241,25 @@ function sortAscDesc(array) {
         }
     }
 
-    parArray.sort(function (a, b) {
-        return a - b;
-    });
-    imparArray.sort(function (a, b) {
-        return b - a;
-    });
+    for (let i = 0; i < parArray.length; i++) {
+        for (let j = 0; j < parArray.length; j++) {
+            if (parArray[j] > parArray[i]) {
+                aux = parArray[j];
+                parArray[j] = parArray[i];
+                parArray[i] = aux;
+            }
+        }
+    }
+
+    for (let i = 0; i < imparArray.length; i++) {
+        for (let k = 0; k < imparArray.length; k++) {
+            if (imparArray[k] < imparArray[i]) {
+                aux = imparArray[i];
+                imparArray[i] = imparArray[k];
+                imparArray[k] = aux;
+            }
+        }
+    }
 
     finalArray = parArray.concat(imparArray);
     return finalArray;

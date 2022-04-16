@@ -35,11 +35,12 @@ function draw() {
 
 function addItem(event) {
     event.preventDefault();
-    let item = document.querySelector(`[name = "item"]`).value;
-
+    let item = document.querySelector(`[name = "item"]`);
+    
     if (item !== "") {
-        state.list.push(item);
+        state.list.push(item.value);
         state.checked.push(false);
+        item.value = "";
     }
     draw();
 }
